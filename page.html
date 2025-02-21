@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background-color: #ffffff;
+        margin: 0%;
+        padding: 0%;
+        background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+      }
+
+      .c-nav {
+        height: fit-content;
+        background-color: aqua;
+        border: 3px solid transparent;
+        transition: border-color 0.1s ease-in-out 0.2s;
+        cursor: crosshair;
+      }
+
+      .c-nav:hover {
+        border-color: #8ec5fc;
+      }
+
+      .c-item {
+        height: 480px;
+        padding: 20px 20px;
+        margin-top: 10px;
+        /* border: 4px solid rgb(216, 38, 38); */
+      }
+
+      .c-img {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .c-icard {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .c-card {
+        height: auto;
+        margin: 40px 50px;
+        background-color: #ffffff;
+        border: 3px solid #ffffff;
+        border-radius: 10px;
+        padding: 6px;
+        min-width: 300px; /* Minimum width for the card */
+        max-width: 100%; /* Maximum width for the card */
+        cursor: pointer;
+        /* transition: background-color 2s ease-in-out 1s; */
+
+        transition: border-color 0.1s ease-in-out 0.2s; /* 0.3s delay before transition starts */
+      }
+
+      .c-card:hover {
+        border-color: #8ec5fc;
+      }
+
+      .c-onlyimg {
+        /*card image*/
+        border-radius: 10px;
+      }
+
+      .c-footer {
+        width: 100%;
+        border-radius: 0%;
+        background-color: #282828;
+        color: #ffffff;
+      }
+    </style>
+    <title>HeyTube</title>
+  </head>
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <nav class="navbar bg-body-tertiary c-nav">
+      <div class="container-fluid">
+        <a class="navbar-brand c-navfont" style="font-family: YouTube Sans"
+          >HeyTube</a
+        >
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+    <div
+      id="carouselExampleAutoplaying"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active c-item">
+          <img src="carousel1.jpg" class="d-block w-100 c-img" alt="slide1" />
+        </div>
+        <div class="carousel-item c-item">
+          <img
+            src="pexels-hiteshchoudhary-18681383.jpg"
+            class="d-block w-100 c-img"
+            alt="slide2"
+          />
+        </div>
+        <div class="carousel-item c-item">
+          <img src="carousel3.jpg" class="d-block w-100 c-img" alt="slide3" />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="c-icard">
+      <div class="card c-card" style="width: 18rem">
+        <img src="html.jpeg" class="card-img-top c-onlyimg" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">HTML</h5>
+          <p class="card-text">HTML complete course in Hindi</p>
+          <a
+            href="https://youtu.be/iVCzmDwIQpA?si=zdsXto0y8_YpITtJ"
+            class="btn btn-primary"
+            >Watch now</a
+          >
+        </div>
+      </div>
+
+      <div class="card c-card" style="width: 18rem">
+        <img src="css.jpeg" class="card-img-top c-onlyimg" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">CSS</h5>
+          <p class="card-text">
+            Why I dont care about CSS | tailwind, shadcn, shoelace, radix, react
+            aria
+          </p>
+          <a
+            href="https://youtu.be/4-Y0r7aIZJQ?si=nuj4dmFzEuzfsXqs"
+            class="btn btn-primary"
+            >Watch now</a
+          >
+        </div>
+      </div>
+
+      <div class="card c-card" style="width: 18rem">
+        <img src="js.jpeg" class="card-img-top c-onlyimg" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">JavaScript</h5>
+          <p class="card-text">Javascript in 1 shot in Hindi | part 1</p>
+          <a
+            href="https://youtu.be/sscX432bMZo?si=PMMLt3TEjTvMj1iu"
+            class="btn btn-primary"
+            >Watch now</a
+          >
+        </div>
+      </div>
+
+      <div class="card text-center c-footer">
+        <div class="card-header">Featured</div>
+        <div class="card-body">
+          <!-- <h1 class="card-title">Special title treatment</h1> -->
+          <p class="card-text">
+            Copyright 2025 &copy HeyTube Pvt.Ltd. All Rightx reserved
+          </p>
+          <a href="#" class="btn btn-primary">Go back</a>
+        </div>
+        <!-- <div class="card-footer text-body-secondary">2 days ago</div> -->
+      </div>
+    </div>
+  </body>
+</html>
